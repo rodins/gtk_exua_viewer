@@ -1,0 +1,26 @@
+<window title="Результаты поиска" icon-name="gtk-execute" default_height="450" default_width="400">
+    <vbox>
+        <hbox>
+            <tree column-visible="true|false" exported-column="1" tooltip-text="Выберите файл для воспроизведения. Двойной клик для запуска.">
+			    <label>Результаты поиска|URL</label>
+			    <variable>resultsLst</variable>
+			    <height>400</height>
+			    <input>resultsLst_Input</input>
+			    <action>playBtn_Click</action>
+		    </tree>
+        </hbox>
+        <hbox>
+            <checkbox tooltip-text="Включить поиск субтитров">
+                <label>субтитры</label>
+                <variable>chkSubtitles</variable>
+            </checkbox>
+            <button tooltip-text="Воспроизвести выбранный элемент списка. F - во весь экран (английская раскладка).">
+                <label>OK</label>
+                <variable>playBtn</variable>
+                <input file stock="gtk-media-play"></input>
+                <action>playBtn_Click</action>
+            </button>
+        </hbox>
+    </vbox>
+    <variable>mainWnd</variable>
+</window>
