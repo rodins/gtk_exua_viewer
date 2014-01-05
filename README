@@ -1,5 +1,10 @@
 exua_viewer is a bash script with gtkdialog gui for searching and watching
 videos from ex.ua with no browser or flash. Works only in Ukraine. It's made for Puppy Linux.
 
-These directories should be used to create pet-package for Puppy.
-Added new line... Testing and learning git
+To create pet use:
+
+tar cf exua_viewer-0.1.tar exua_viewer-0.1/
+gzip exua_viewer-0.1.tar.gz
+tgz2pet exua_viewer-0.1.tar.gz
+
+Or use 'dir2pet exua_viewer-0.1' and except the defaults
