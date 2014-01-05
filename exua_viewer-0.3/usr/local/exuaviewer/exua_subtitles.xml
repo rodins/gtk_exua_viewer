@@ -1,0 +1,22 @@
+<window title="Субтитры" icon-name="gtk-execute" default_height="300" default_width="400">
+    <vbox>
+        <hbox>
+            <tree column-visible="true|false" exported-column="1" tooltip-text="Выберите субтитры или просто нажмите кнопку Ok. Двойной клик для запуска.">
+			    <label>Результаты поиска|URL</label>
+			    <variable>resultsLst</variable>
+			    <height>400</height>
+			    <input>resultsLst_Input</input>
+			    <action>playBtn_Click</action>
+		    </tree>
+        </hbox>
+        <hbox>
+            <button tooltip-text="Выбрать субтитры и/или начать воспроизведение. F - во весь экран (английская раскладка).">
+                <label>OK</label>
+                <variable>playBtn</variable>
+                <input file stock="gtk-media-play"></input>
+                <action>playBtn_Click</action>
+            </button>
+        </hbox>
+    </vbox>
+    <variable>mainWnd</variable>
+</window>

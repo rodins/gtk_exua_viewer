@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name[ru]=Просмотр видео с ex.ua (консоль)
+Name=Watch video from ex.ua (console)
+Icon=mini-sh1.xpm
+Comment=Watch video from ex.ua
+Exec=rxvt -geometry 80x25 -e exua_viewer
+Terminal=false
+Type=Application
+Categories=AudioVideo
+GenericName=exua_viewer

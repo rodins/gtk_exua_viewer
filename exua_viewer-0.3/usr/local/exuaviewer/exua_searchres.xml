@@ -1,0 +1,49 @@
+<window title="Результаты поиска" icon-name="gtk-execute" default_height="500" default_width="400">
+    <vbox>
+        <hbox>
+            <text use-markup="true">
+                <input>showRequest</input>
+            </text>
+        </hbox>
+        <hbox>
+            <tree tooltip-text="Выберите файл для воспроизведения. Двойной клик для запуска.">
+			    <label>№|Результаты поиска</label>
+			    <variable>resultsLst</variable>
+			    <height>400</height>
+			    <input icon-column="1">cat "$resFile" | grep '|'</input>
+			    <action>playBtn_Click</action>
+		    </tree>
+        </hbox>
+        <hbox>
+            <progressbar>
+                <variable>searchPb</variable>
+                <input>searchPb_Input</input>
+			    <action>refresh:resultsLst</action>
+			    <action>enable:playBtn</action>
+			    <action>enable:nextBtn</action>
+            </progressbar>
+        </hbox>
+        <hbox>
+            <checkbox tooltip-text="Включить поиск субтитров (только для файлов)">
+                <label>субтитры</label>
+                <variable>chkSubtitles</variable>
+            </checkbox>
+            <button tooltip-text="Воспроизвести выбранный элемент списка или покзать список файлов. F - во весь экран (английская раскладка).">
+                <label>OK</label>
+                <variable>playBtn</variable>
+                <visible>disabled</visible>
+                <input file stock="gtk-media-play"></input>
+                <action>playBtn_Click</action>
+            </button>
+            <button tooltip-text="Перейти на следующую страницу результатов">
+                <label>След.</label>
+                <variable>nextBtn</variable>
+                <visible>disabled</visible>
+                <input file stock="gtk-go-forward"></input>
+                <action>nextBtn_Click</action>
+            </button>
+        </hbox>
+    </vbox>
+    <variable>mainWnd</variable>
+    <action signal="delete-event">window_OnClose</action>
+</window>
