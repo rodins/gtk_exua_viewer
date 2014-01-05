@@ -1,5 +1,0 @@
-#!/bin/sh
-# Скрипт для запуска exua_viewer с графическим интерфейсом
-
-cd /usr/local/exuaviewer
-./exua_viewer.sh
