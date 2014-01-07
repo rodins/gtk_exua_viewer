@@ -66,7 +66,7 @@ searchPb_Input(){
 	            icon="mini-Multimedia-video"
 	        fi
 	        # Вывод результатов в файл, sed используется для замены HTML-сущностей
-	        echo "$i | $icon | $title | $playFlv | $isSerial | $fullLink" | sed -e "s/&#39;/'/g" | sed -e "s/&quot;/'/g" >> $resFile
+	        echo "$i | $icon | $title | $playFlv | $isSerial | $fullLink" | sed -e "s/&#39;/'/g" | sed -e "s/&quot;/'/g" | sed -e "s/&amp;/\&/g" >> $resFile
 	        (( i++ )) 
 	    fi
 	fi

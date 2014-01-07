@@ -208,7 +208,7 @@ playSearchResults(){
     # Отображение массива заголовков
 	for (( j=1;j<i;j++ ))
 	do
-	   echo -ne ${titleArr[$j]} | sed -e "s/&#39;/'/g" | sed -e "s/&quot;/'/g"
+	   echo -ne ${titleArr[$j]} | sed -e "s/&#39;/'/g" | sed -e "s/&quot;/'/g" | sed -e "s/&amp;/\&/g"
 	   # Если это сериал - вывести информацию об этом
 	   if [ ${seriArr[$j]} -eq 0 ]
 	   then echo -n " (один видеофайл)"
